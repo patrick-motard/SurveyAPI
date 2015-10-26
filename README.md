@@ -4,12 +4,14 @@ RESTful API for creating surveys.
 To test it out locally:
 
 1. clone repo locally
-2. open solution
+2. open solution (as administrator)
 3. (in visual studio) copy contents of `~/SurveyBuilder/Migrations/Configuration.cs`
 4. (in visual studio) delete Migrations folder
 5. open package manager console
-6. (in package manager console) enter `Enable-Migrations`
-7. overwrite generated `~/SurveyBuilder/Migrations/Configuration.cs` with previously copied `Configuration.cs`
+6. (in package manager console) enter `Enable-Migrations -ContextTypeName SurveyBuilder.Models.SurveyBuilderContext`
+7. overwrite generated `~/SurveyBuilder/Migrations/Configuration.cs` with previously copied `Configuration.cs` 
+(here is a link to the class if you forgot to copy or lost your copy history: 
+https://github.com/patrick-motard/SurveyAPI/blob/master/SurveyBuilder/SurveyBuilder/Migrations/Configuration.cs)
 8. (in package manager console) enter `Add-Migration Initial`
 9. (in package manager console) enter `Update-Database`
 10. build solution
