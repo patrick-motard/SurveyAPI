@@ -75,3 +75,59 @@ var surveys = new List<Survey>()
 	}
 };
 ```
+
+## Survey JSON Object (low detail)
+`http:~~/Api/survey/getall`
+
+```
+[
+  {
+    "CreatedBy": "sample string 1",
+    "CreatedDate": "2015-10-25T21:53:26.7151354-05:00",
+    "Description": "sample string 3",
+    "Id": 4,
+    "Name": "sample string 5"
+  },
+  {
+    "CreatedBy": "sample string 1",
+    "CreatedDate": "2015-10-25T21:53:26.7151354-05:00",
+    "Description": "sample string 3",
+    "Id": 4,
+    "Name": "sample string 5"
+  }
+]
+```
+
+
+## Survey JSON Object (full detail)
+`http:~~/Api/survey/get/{id}`
+```
+{
+  "CreatedBy": "sample string 1",
+  "CreatedDate": "2015-10-25T22:27:16.8172837-05:00",
+  "Description": "sample string 3",
+  "Id": 4,
+  "Name": "sample string 5",
+  "CompletedMessage": "sample string 6",
+  "Questions": [
+    {
+      "Id": 1,
+      "Question": "sample string 2",
+      "Options": [
+        "sample string 1",
+        "sample string 2"
+      ],
+      "Answer": "sample string 3"
+    },
+    {
+      "Id": 1,
+      "Question": "sample string 2",
+      "Options": [
+        "sample string 1",
+        "sample string 2"
+      ],
+      "Answer": "sample string 3"
+    }
+  ]
+}
+```
