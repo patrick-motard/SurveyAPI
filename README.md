@@ -13,9 +13,11 @@ To test it out locally:
 (here is a link to the class if you forgot to copy or lost your copy history: 
 https://github.com/patrick-motard/SurveyAPI/blob/master/SurveyBuilder/SurveyBuilder/Migrations/Configuration.cs)
 8. (in package manager console) enter `Add-Migration Initial`
-9. (in package manager console) enter `Update-Database`
-10. build solution
-11. run solution
+9. (in the webconfig) make sure your connection string is correctly pointing to your local db (might just work by default)
+10. make sure your permissions are set up correctly see: http://stackoverflow.com/questions/13123515/mdf-file-is-not-created-on-asp-net-mvc-4-app-after-adding-connectionstrings-t
+11. (in package manager console) enter `Update-Database`
+12. build solution
+13. run solution
 
 
 You can see descriptions of the JSON objects returned from the methods by navigating to the help page.
