@@ -18,7 +18,7 @@ To test it out locally:
 
 You can see descriptions of the JSON objects returned from the methods by navigating to the help page.
 
-Examples of the 4 types of questions:
+## Examples of the 4 types of questions:
 ```
 var questions = new List<QuestionObject>()
 {
@@ -47,6 +47,31 @@ var questions = new List<QuestionObject>()
 		Answer = "",
 		Question = "How many hours each night do you sleep?",
 		Options = new List<string>() {"8 or more", "6 or more", "5 or more", "less than 5" }
+	}
+};
+```
+
+## Example of Surveys:
+```
+var surveys = new List<Survey>()
+{
+	new Survey()
+	{
+		CompletedMessage = "You did it!",
+		CreatedBy = "Bob Dole",
+		CreatedDate = DateTime.Now,
+		Description = "Bob Dole's little know political facts",
+		Name = "Political Intrigue",
+		Questions = questions.Where(question => (question.Id ==1) || (question.Id == 2)).ToList()
+	},
+	new Survey()
+	{
+		CompletedMessage = "Thank you, one of our health professionals will assist you shortly.",
+		CreatedBy = "New Approach Hospitcal and Clinics",
+		CreatedDate = DateTime.Now,
+		Description = "Pre-screening survey for incoming patients",
+		Name = "Condition Survey",
+		Questions = questions.Where(question => (question.Id == 3) || (question.Id == 4)).ToList()
 	}
 };
 ```
